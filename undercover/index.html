@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🤐 Mr White</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🤐</div>
+      <div>
+        <h1>MR WHITE</h1>
+        <p>Déduction • Bluffs • Votes</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- START -->
+    <section id="startScreen" class="screen active">
+      <div class="card hero">
+        <h2>Prêt à lancer une partie ?</h2>
+        <p class="muted">Configure la partie puis joue.</p>
+
+        <div class="rulesGrid">
+          <div class="ruleBox"><span>👤</span><div><b>Civil</b><small>a un mot</small></div></div>
+          <div class="ruleBox"><span>🕵️</span><div><b>Imposteur</b><small>a un autre mot</small></div></div>
+          <div class="ruleBox"><span>🤐</span><div><b>Mr White</b><small>aucun mot</small></div></div>
+        </div>
+
+        <button id="startBtn" class="btn btn-primary">Configurer la partie</button>
+        <p id="loadWordsInfo" class="muted small"></p>
+      </div>
+    </section>
+
+    <!-- CONFIG -->
+    <section id="configScreen" class="screen">
+      <div class="card">
+        <h2>Configuration</h2>
+
+        <div class="formGrid">
+          <div class="field">
+            <label>👥 Joueurs</label>
+            <input type="number" id="playerCount" min="3" max="20" value="6">
+          </div>
+
+          <div class="field">
+            <label>🕵️ Imposteurs</label>
+            <input type="number" id="impostorCount" min="0" value="1">
+          </div>
+
+          <div class="field">
+            <label>🤐 Mr White</label>
+            <input type="number" id="mrWhiteCount" min="0" value="1">
+          </div>
+        </div>
+
+        <div class="summary">
+          <span id="summaryText"></span>
+          <p id="configError" class="error"></p>
+        </div>
+
+        <div class="actions">
+          <button id="backBtn" class="btn btn-ghost">Retour</button>
+          <button id="toNamesBtn" class="btn btn-primary">Continuer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAMES -->
+    <section id="namesScreen" class="screen">
+      <div class="card">
+        <h2>Pseudos</h2>
+        <p class="muted">Entre les noms des joueurs.</p>
+
+        <div id="namesContainer" class="namesGrid"></div>
+        <p id="namesError" class="error"></p>
+
+        <div class="actions">
+          <button id="namesBackBtn" class="btn btn-ghost">Retour</button>
+          <button id="namesContinueBtn" class="btn btn-primary">Lancer la partie</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS -->
+    <section id="cardScreen" class="screen">
+      <div class="card">
+        <h2>Distribution</h2>
+        <p id="cardPlayerName"></p>
+
+        <div id="secretCard" class="secretCard hidden"></div>
+
+        <div class="actions">
+          <button id="revealBtn" class="btn btn-ghost">Révéler</button>
+          <button id="nextCardBtn" class="btn btn-primary" disabled>Suivant</button>
+        </div>
+
+        <div class="chip" id="cardIndex"></div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="gameScreen" class="screen">
+      <div class="card">
+        <div class="cardHeader">
+          <h2 id="roundTitle">Manche 1</h2>
+          <div class="stats">
+            <span id="aliveCount" class="chip"></span>
+            <span id="roleCount" class="chip"></span>
+          </div>
+        </div>
+
+        <div id="cluesPhase" class="phase active">
+          <h3>💡 Indices</h3>
+          <div id="cluesContainer" class="list"></div>
+          <button id="toVotingBtn" class="btn btn-primary">Passer au vote</button>
+        </div>
+
+        <div id="votingPhase" class="phase">
+          <h3>🗳️ Vote</h3>
+          <div id="votingContainer" class="votes"></div>
+          <button id="submitVoteBtn" class="btn btn-primary" disabled>Valider</button>
+        </div>
+
+        <div id="revelationPhase" class="phase">
+          <div id="revelationContent" class="revealBox"></div>
+          <button id="continueGameBtn" class="btn btn-primary">Continuer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUESS -->
+    <section id="guessScreen" class="screen">
+      <div class="card">
+        <h2>🤐 Mr White</h2>
+        <p>Devine le mot :</p>
+        <input id="guessInput" class="textInput" />
+        <button id="guessSubmitBtn" class="btn btn-primary">Valider</button>
+      </div>
+    </section>
+
+    <!-- END -->
+    <section id="endScreen" class="screen">
+      <div class="card">
+        <h2>🏆 Fin de la partie</h2>
+        <div id="winnerMessage" class="winner"></div>
+        <div id="finalStats"></div>
+
+        <div class="actions">
+          <button id="restartBtn" class="btn btn-primary">Rejouer</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
