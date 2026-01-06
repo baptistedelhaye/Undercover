@@ -133,7 +133,6 @@
 
   { "a": "Boulangerie", "b": "Pâtisserie" },
   { "a": "Boucherie", "b": "Poissonnerie" },
-  { "a": "Pharmacie", "b": "Parapharmacie" },
   { "a": "Bibliothèque", "b": "Librairie" },
   { "a": "Stade", "b": "Gymnase" },
   { "a": "Parc", "b": "Jardin" },
