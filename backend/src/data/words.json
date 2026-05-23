@@ -1,0 +1,39 @@
+{
+  "animaux": [
+    { "civil": "Chat", "undercover": "Tigre" },
+    { "civil": "Chien", "undercover": "Loup" },
+    { "civil": "Puzzle", "undercover": "Robot" }
+  ],
+  "films": [
+    { "civil": "Cinéphile", "undercover": "Réalisateur" },
+    { "civil": "Oscar", "undercover": "Blockbuster" },
+    { "civil": "Scène", "undercover": "Coulisse" }
+  ],
+  "jeux-video": [
+    { "civil": "Quête", "undercover": "Boss" },
+    { "civil": "Niveau", "undercover": "Pixel" },
+    { "civil": "Chemin", "undercover": "Mana" }
+  ],
+  "personnages": [
+    { "civil": "Musicien", "undercover": "Acteur" },
+    { "civil": "Explorateur", "undercover": "Voyageur" },
+    { "civil": "Héros", "undercover": "Anti-héros" }
+  ],
+  "melange": [
+    { "civil": "Fête", "undercover": "Secret" },
+    { "civil": "Lumière", "undercover": "Ombre" },
+    { "civil": "Carte", "undercover": "Mystère" }
+  ],
+  "timesup": [
+    "Arc-en-ciel",
+    "Dragon",
+    "Indiana Jones",
+    "Guitare",
+    "Chat botté",
+    "Fast and Furious",
+    "Fortnite",
+    "Lion",
+    "Marie Curie",
+    "Mario"
+  ]
+}
