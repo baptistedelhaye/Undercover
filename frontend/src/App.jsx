@@ -8,9 +8,9 @@ import GameOver from './pages/GameOver';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors duration-300">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] transition-colors duration-300 overflow-x-hidden">
       <Navbar />
-      <main className="px-4 py-6 sm:px-6 lg:px-10">
+      <main className="mx-auto max-w-6xl px-4 py-5 sm:px-6 lg:px-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lobby" element={<Lobby />} />
